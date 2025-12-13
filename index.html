@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #0b0b0b;
       color: #e6e6e6;
     }
@@ -30,7 +30,8 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: #222;
+      object-fit: cover;
+      border: 1px solid #1a1a1a;
     }
     .name {
       font-weight: 600;
@@ -131,7 +132,7 @@
   <div class="layout">
     <aside>
       <div class="profile">
-        <div class="avatar"></div>
+        <img class="avatar" src="pfp.jpeg" alt="Profile picture" />
         <div>
           <div class="name">Daniel Enerowo</div>
           <div class="role">Software Developer</div>

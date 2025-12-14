@@ -3,178 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Enerowo | Developer</title>
+  <title>Daniel Enerowo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0b0b0b;
-      color: #e6e6e6;
+      padding: 0;
     }
-    .layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
+
+    body {
+      font-family: 'Martian Mono', monospace;
+      background: #0e0e0e;
+      color: #eaeaea;
       min-height: 100vh;
-    }
-    aside {
-      padding: 32px 24px;
-      border-right: 1px solid #1a1a1a;
-    }
-    .profile {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 32px;
+      justify-content: center;
     }
-    .avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid #1a1a1a;
+
+    .container {
+      max-width: 720px;
+      padding: 40px 24px;
+      width: 100%;
     }
-    .name {
-      font-weight: 600;
-    }
-    .role {
-      font-size: 0.85rem;
-      color: #9a9a9a;
-    }
-    nav a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      color: #9a9a9a;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    .badge {
-      background: #1f1f1f;
-      border-radius: 6px;
-      padding: 2px 8px;
-      font-size: 0.75rem;
-    }
-    main {
-      padding: 48px;
-      max-width: 900px;
-    }
-    section {
-      margin-bottom: 56px;
-    }
+
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+      font-weight: 500;
       margin-bottom: 12px;
     }
+
     p {
+      font-size: 0.9rem;
+      line-height: 1.7;
       color: #bdbdbd;
-      line-height: 1.6;
+      margin-bottom: 32px;
     }
-    .card {
-      background: #111;
-      border: 1px solid #1a1a1a;
-      border-radius: 14px;
-      padding: 20px;
-      margin-top: 16px;
-    }
-    .input {
+
+    .links {
       display: flex;
-      margin-top: 16px;
-      background: #111;
-      border: 1px solid #1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-    .input input {
-      flex: 1;
-      background: transparent;
-      border: none;
-      color: #e6e6e6;
-      padding: 14px;
-      outline: none;
-      font-family: inherit;
-    }
-    .input button {
-      background: #5b5fdb;
-      border: none;
-      padding: 0 18px;
-      color: white;
-      font-family: inherit;
-      cursor: pointer;
-    }
-    .link {
-      display: inline-block;
-      margin-top: 12px;
-      color: #e6e6e6;
+
+    a {
       text-decoration: none;
+      color: #eaeaea;
+      font-size: 0.85rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px;
+      transition: border-color 0.2s ease, color 0.2s ease;
     }
-    .link span {
-      color: #9a9a9a;
+
+    a:hover {
+      color: #ffffff;
+      border-color: #ffffff;
     }
-    @media (max-width: 800px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-      aside {
-        border-right: none;
-        border-bottom: 1px solid #1a1a1a;
-      }
-      main {
-        padding: 32px 20px;
-      }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.7rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="layout">
-    <aside>
-      <div class="profile">
-        <img class="avatar" src="pfp.jpeg" alt="Profile picture" />
-        <div>
-          <div class="name">Daniel Enerowo</div>
-          <div class="role">Software Developer</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#">Home <span class="badge">1</span></a>
-        <a href="#">Projects <span class="badge">2</span></a>
-        <a href="#">Stack <span class="badge">3</span></a>
-        <a href="#">Links <span class="badge">4</span></a>
-      </nav>
-    </aside>
-    <main>
-      <section>
-        <h1>About</h1>
-        <p>I build and design clean, functional software products. I focus on frontend development, UI systems, and fixing broken apps.</p>
-      </section>
-      <section>
-        <h1>Newsletter</h1>
-        <p>Documenting what I learn while building apps and freelancing.</p>
-        <div class="input">
-          <input placeholder="your@email.com" />
-          <button>Join</button>
-        </div>
-      </section>
-      <section>
-        <h1>Projects</h1>
-        <div class="card">
-          <strong>Wardrobe App (UI Prototype)</strong>
-          <p>Outfit planning app with a clean iOS-style interface and consistent design system.</p>
-        </div>
-        <div class="card">
-          <strong>React Dashboard</strong>
-          <p>Responsive dashboard layout with reusable components.</p>
-        </div>
-      </section>
-      <section>
-        <h1>Links</h1>
-        <a class="link" href="#">GitHub <span>→</span></a><br />
-        <a class="link" href="#">Fiverr <span>→</span></a>
-      </section>
-    </main>
+  <div class="container">
+    <h1>Daniel Enerowo</h1>
+    <p>
+      Developer focused on clean interfaces, mobile apps, and practical software.
+      I build fast, simple products and ship.
+    </p>
+
+    <div class="links">
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://www.fiverr.com/" target="_blank">Fiverr</a>
+    </div>
+
+    <footer>
+      © 2025
+    </footer>
   </div>
 </body>
 </html>
